@@ -1,0 +1,809 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8434AB3E254C13B100957888 /* appender.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB04254C13B100957888 /* appender.cc */; };
+		8434AB3F254C13B100957888 /* appender.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB04254C13B100957888 /* appender.cc */; };
+		8434AB41254C13B100957888 /* time_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 8434AB05254C13B100957888 /* time_util.h */; };
+		8434AB42254C13B100957888 /* zlutils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8434AB06254C13B100957888 /* zlutils.h */; };
+		8434AB43254C13B100957888 /* ptrbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8434AB07254C13B100957888 /* ptrbuffer.h */; };
+		8434AB44254C13B100957888 /* zl_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8434AB08254C13B100957888 /* zl_buffer.h */; };
+		8434AB45254C13B100957888 /* zl_buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB09254C13B100957888 /* zl_buffer.cc */; };
+		8434AB46254C13B100957888 /* zl_buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB09254C13B100957888 /* zl_buffer.cc */; };
+		8434AB92254C13B100957888 /* appender.h in Headers */ = {isa = PBXBuildFile; fileRef = 8434AB32254C13B100957888 /* appender.h */; };
+		8434AB93254C13B100957888 /* ptrbuffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB33254C13B100957888 /* ptrbuffer.cc */; };
+		8434AB94254C13B100957888 /* ptrbuffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB33254C13B100957888 /* ptrbuffer.cc */; };
+		8434AB96254C13B100957888 /* dir_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB34254C13B100957888 /* dir_util.c */; };
+		8434AB97254C13B100957888 /* dir_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB34254C13B100957888 /* dir_util.c */; };
+		8434AB99254C13B100957888 /* autobuffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB35254C13B100957888 /* autobuffer.cc */; };
+		8434AB9A254C13B100957888 /* autobuffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB35254C13B100957888 /* autobuffer.cc */; };
+		8434AB9C254C13B100957888 /* time_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB36254C13B100957888 /* time_util.c */; };
+		8434AB9D254C13B100957888 /* time_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB36254C13B100957888 /* time_util.c */; };
+		8434AB9F254C13B100957888 /* autobuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8434AB37254C13B100957888 /* autobuffer.h */; };
+		8434ABA0254C13B100957888 /* mmap_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB38254C13B100957888 /* mmap_util.cc */; };
+		8434ABA1254C13B100957888 /* mmap_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB38254C13B100957888 /* mmap_util.cc */; };
+		8434ABA3254C13B100957888 /* zlutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB39254C13B100957888 /* zlutils.c */; };
+		8434ABA4254C13B100957888 /* zlutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 8434AB39254C13B100957888 /* zlutils.c */; };
+		8434ABA9254C13B100957888 /* dir_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 8434AB3B254C13B100957888 /* dir_util.h */; };
+		8434ABAB254C13B100957888 /* mmap_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 8434AB3D254C13B100957888 /* mmap_util.h */; };
+		8434ABE4254C14CC00957888 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8434ABE3254C14CC00957888 /* AppDelegate.m */; };
+		8434ABEA254C14CC00957888 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8434ABE9254C14CC00957888 /* ViewController.m */; };
+		8434ABED254C14CC00957888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8434ABEB254C14CC00957888 /* Main.storyboard */; };
+		8434ABEF254C14CD00957888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8434ABEE254C14CD00957888 /* Assets.xcassets */; };
+		8434ABF2254C14CD00957888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8434ABF0254C14CD00957888 /* LaunchScreen.storyboard */; };
+		8434ABF5254C14CD00957888 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8434ABF4254C14CD00957888 /* main.m */; };
+		844FF36D254FB37000EFAC91 /* czlog.h in Headers */ = {isa = PBXBuildFile; fileRef = 844FF36B254FB37000EFAC91 /* czlog.h */; };
+		844FF36E254FB37000EFAC91 /* czlog.cc in Sources */ = {isa = PBXBuildFile; fileRef = 844FF36C254FB37000EFAC91 /* czlog.cc */; };
+		844FF36F254FB37000EFAC91 /* czlog.cc in Sources */ = {isa = PBXBuildFile; fileRef = 844FF36C254FB37000EFAC91 /* czlog.cc */; };
+		844FF378254FBBE200EFAC91 /* typedefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 844FF376254FBBE200EFAC91 /* typedefine.h */; };
+		84604EB8255251D90084F1B3 /* mutex.h in Sources */ = {isa = PBXBuildFile; fileRef = 84604EB6255251D90084F1B3 /* mutex.h */; };
+		84604EB9255251D90084F1B3 /* mutex.h in Sources */ = {isa = PBXBuildFile; fileRef = 84604EB6255251D90084F1B3 /* mutex.h */; };
+		84604EC7255256060084F1B3 /* scopelock.cc in Sources */ = {isa = PBXBuildFile; fileRef = 84604EC6255256060084F1B3 /* scopelock.cc */; };
+		84604EC8255256060084F1B3 /* scopelock.cc in Sources */ = {isa = PBXBuildFile; fileRef = 84604EC6255256060084F1B3 /* scopelock.cc */; };
+		84C757AA2553FD5100D2E90E /* zl_crypt.cc in Sources */ = {isa = PBXBuildFile; fileRef = 84C7579A2553FD5100D2E90E /* zl_crypt.cc */; };
+		84C757AB2553FD5100D2E90E /* zl_crypt.cc in Sources */ = {isa = PBXBuildFile; fileRef = 84C7579A2553FD5100D2E90E /* zl_crypt.cc */; };
+		84C757AC2553FD5100D2E90E /* uECC.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C7579C2553FD5100D2E90E /* uECC.h */; };
+		84C757AD2553FD5100D2E90E /* asm_avr_mult_square.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C7579D2553FD5100D2E90E /* asm_avr_mult_square.inc */; };
+		84C757AE2553FD5100D2E90E /* asm_avr_mult_square.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C7579D2553FD5100D2E90E /* asm_avr_mult_square.inc */; };
+		84C757AF2553FD5100D2E90E /* uECC_vli.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C7579F2553FD5100D2E90E /* uECC_vli.h */; };
+		84C757B02553FD5100D2E90E /* curve-specific.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A02553FD5100D2E90E /* curve-specific.inc */; };
+		84C757B12553FD5100D2E90E /* curve-specific.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A02553FD5100D2E90E /* curve-specific.inc */; };
+		84C757B22553FD5100D2E90E /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C757A12553FD5100D2E90E /* types.h */; };
+		84C757B32553FD5100D2E90E /* asm_arm.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A22553FD5100D2E90E /* asm_arm.inc */; };
+		84C757B42553FD5100D2E90E /* asm_arm.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A22553FD5100D2E90E /* asm_arm.inc */; };
+		84C757B52553FD5100D2E90E /* asm_arm_mult_square_umaal.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A32553FD5100D2E90E /* asm_arm_mult_square_umaal.inc */; };
+		84C757B62553FD5100D2E90E /* asm_arm_mult_square_umaal.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A32553FD5100D2E90E /* asm_arm_mult_square_umaal.inc */; };
+		84C757B72553FD5100D2E90E /* platform-specific.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A42553FD5100D2E90E /* platform-specific.inc */; };
+		84C757B82553FD5100D2E90E /* platform-specific.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A42553FD5100D2E90E /* platform-specific.inc */; };
+		84C757B92553FD5100D2E90E /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A52553FD5100D2E90E /* uECC.c */; };
+		84C757BA2553FD5100D2E90E /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A52553FD5100D2E90E /* uECC.c */; };
+		84C757BB2553FD5100D2E90E /* asm_arm_mult_square.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A62553FD5100D2E90E /* asm_arm_mult_square.inc */; };
+		84C757BC2553FD5100D2E90E /* asm_arm_mult_square.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A62553FD5100D2E90E /* asm_arm_mult_square.inc */; };
+		84C757BD2553FD5100D2E90E /* asm_avr.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A72553FD5100D2E90E /* asm_avr.inc */; };
+		84C757BE2553FD5100D2E90E /* asm_avr.inc in Sources */ = {isa = PBXBuildFile; fileRef = 84C757A72553FD5100D2E90E /* asm_avr.inc */; };
+		84C757BF2553FD5100D2E90E /* formater.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C757A82553FD5100D2E90E /* formater.h */; };
+		84C757C02553FD5100D2E90E /* zl_crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C757A92553FD5100D2E90E /* zl_crypt.h */; };
+		AEB22ABE254EF2FF006D4827 /* android_alarm.h in Headers */ = {isa = PBXBuildFile; fileRef = AEB22ABD254EF2FF006D4827 /* android_alarm.h */; };
+		AEB22AC0254F0CE2006D4827 /* libczlog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DF219C254909D00012A3CB /* libczlog.a */; };
+		AEB22AC4254F0DE8006D4827 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB22AC3254F0DCE006D4827 /* libz.tbd */; };
+		AEB22ACB25519487006D4827 /* extract_util.h in Headers */ = {isa = PBXBuildFile; fileRef = AEB22AC925519487006D4827 /* extract_util.h */; };
+		AEB22ACC25519487006D4827 /* extract_util.c in Sources */ = {isa = PBXBuildFile; fileRef = AEB22ACA25519487006D4827 /* extract_util.c */; };
+		AEB22ACD25519487006D4827 /* extract_util.c in Sources */ = {isa = PBXBuildFile; fileRef = AEB22ACA25519487006D4827 /* extract_util.c */; };
+		AEB22AD52551969F006D4827 /* Zlog.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEB22AD32551969F006D4827 /* Zlog.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEB22A8A254EEBBE006D4827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DF2188254909A70012A3CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DF219B254909D00012A3CB;
+			remoteInfo = czlog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84DF219A254909D00012A3CB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8434AB04254C13B100957888 /* appender.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = appender.cc; sourceTree = "<group>"; };
+		8434AB05254C13B100957888 /* time_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_util.h; sourceTree = "<group>"; };
+		8434AB06254C13B100957888 /* zlutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zlutils.h; sourceTree = "<group>"; };
+		8434AB07254C13B100957888 /* ptrbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptrbuffer.h; sourceTree = "<group>"; };
+		8434AB08254C13B100957888 /* zl_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zl_buffer.h; sourceTree = "<group>"; };
+		8434AB09254C13B100957888 /* zl_buffer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zl_buffer.cc; sourceTree = "<group>"; };
+		8434AB32254C13B100957888 /* appender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appender.h; sourceTree = "<group>"; };
+		8434AB33254C13B100957888 /* ptrbuffer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ptrbuffer.cc; sourceTree = "<group>"; };
+		8434AB34254C13B100957888 /* dir_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dir_util.c; sourceTree = "<group>"; };
+		8434AB35254C13B100957888 /* autobuffer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = autobuffer.cc; sourceTree = "<group>"; };
+		8434AB36254C13B100957888 /* time_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = time_util.c; sourceTree = "<group>"; };
+		8434AB37254C13B100957888 /* autobuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autobuffer.h; sourceTree = "<group>"; };
+		8434AB38254C13B100957888 /* mmap_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mmap_util.cc; sourceTree = "<group>"; };
+		8434AB39254C13B100957888 /* zlutils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zlutils.c; sourceTree = "<group>"; };
+		8434AB3B254C13B100957888 /* dir_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dir_util.h; sourceTree = "<group>"; };
+		8434AB3D254C13B100957888 /* mmap_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmap_util.h; sourceTree = "<group>"; };
+		8434ABE0254C14CC00957888 /* ZlogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZlogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8434ABE2254C14CC00957888 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8434ABE3254C14CC00957888 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8434ABE8254C14CC00957888 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8434ABE9254C14CC00957888 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8434ABEC254C14CC00957888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8434ABEE254C14CD00957888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8434ABF1254C14CD00957888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8434ABF3254C14CD00957888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8434ABF4254C14CD00957888 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		844FF36B254FB37000EFAC91 /* czlog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = czlog.h; sourceTree = "<group>"; };
+		844FF36C254FB37000EFAC91 /* czlog.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = czlog.cc; sourceTree = "<group>"; };
+		844FF376254FBBE200EFAC91 /* typedefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = typedefine.h; sourceTree = "<group>"; };
+		84604EB6255251D90084F1B3 /* mutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mutex.h; sourceTree = "<group>"; };
+		84604EC6255256060084F1B3 /* scopelock.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = scopelock.cc; sourceTree = "<group>"; };
+		84C7579A2553FD5100D2E90E /* zl_crypt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zl_crypt.cc; sourceTree = "<group>"; };
+		84C7579C2553FD5100D2E90E /* uECC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uECC.h; sourceTree = "<group>"; };
+		84C7579D2553FD5100D2E90E /* asm_avr_mult_square.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_avr_mult_square.inc; sourceTree = "<group>"; };
+		84C7579F2553FD5100D2E90E /* uECC_vli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uECC_vli.h; sourceTree = "<group>"; };
+		84C757A02553FD5100D2E90E /* curve-specific.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "curve-specific.inc"; sourceTree = "<group>"; };
+		84C757A12553FD5100D2E90E /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		84C757A22553FD5100D2E90E /* asm_arm.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_arm.inc; sourceTree = "<group>"; };
+		84C757A32553FD5100D2E90E /* asm_arm_mult_square_umaal.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_arm_mult_square_umaal.inc; sourceTree = "<group>"; };
+		84C757A42553FD5100D2E90E /* platform-specific.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "platform-specific.inc"; sourceTree = "<group>"; };
+		84C757A52553FD5100D2E90E /* uECC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uECC.c; sourceTree = "<group>"; };
+		84C757A62553FD5100D2E90E /* asm_arm_mult_square.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_arm_mult_square.inc; sourceTree = "<group>"; };
+		84C757A72553FD5100D2E90E /* asm_avr.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_avr.inc; sourceTree = "<group>"; };
+		84C757A82553FD5100D2E90E /* formater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = formater.h; sourceTree = "<group>"; };
+		84C757A92553FD5100D2E90E /* zl_crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zl_crypt.h; sourceTree = "<group>"; };
+		84DF219C254909D00012A3CB /* libczlog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libczlog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DF21B525490AA40012A3CB /* libczlog-macos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libczlog-macos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB22ABD254EF2FF006D4827 /* android_alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = android_alarm.h; sourceTree = "<group>"; };
+		AEB22AC3254F0DCE006D4827 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		AEB22AC925519487006D4827 /* extract_util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = extract_util.h; sourceTree = "<group>"; };
+		AEB22ACA25519487006D4827 /* extract_util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = extract_util.c; sourceTree = "<group>"; };
+		AEB22AD32551969F006D4827 /* Zlog.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Zlog.mm; sourceTree = "<group>"; };
+		AEB22AD42551969F006D4827 /* Zlog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zlog.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8434ABDD254C14CC00957888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB22AC4254F0DE8006D4827 /* libz.tbd in Frameworks */,
+				AEB22AC0254F0CE2006D4827 /* libczlog.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DF2199254909D00012A3CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DF21B325490AA40012A3CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8434AB03254C13B100957888 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				84C757A82553FD5100D2E90E /* formater.h */,
+				84C7579B2553FD5100D2E90E /* micro-ecc-master */,
+				84C7579A2553FD5100D2E90E /* zl_crypt.cc */,
+				84C757A92553FD5100D2E90E /* zl_crypt.h */,
+				AEB22ABD254EF2FF006D4827 /* android_alarm.h */,
+				8434AB32254C13B100957888 /* appender.h */,
+				8434AB04254C13B100957888 /* appender.cc */,
+				8434AB05254C13B100957888 /* time_util.h */,
+				8434AB36254C13B100957888 /* time_util.c */,
+				8434AB07254C13B100957888 /* ptrbuffer.h */,
+				8434AB33254C13B100957888 /* ptrbuffer.cc */,
+				8434AB08254C13B100957888 /* zl_buffer.h */,
+				8434AB09254C13B100957888 /* zl_buffer.cc */,
+				8434AB3B254C13B100957888 /* dir_util.h */,
+				8434AB34254C13B100957888 /* dir_util.c */,
+				8434AB06254C13B100957888 /* zlutils.h */,
+				8434AB39254C13B100957888 /* zlutils.c */,
+				8434AB37254C13B100957888 /* autobuffer.h */,
+				8434AB35254C13B100957888 /* autobuffer.cc */,
+				8434AB3D254C13B100957888 /* mmap_util.h */,
+				8434AB38254C13B100957888 /* mmap_util.cc */,
+				844FF36B254FB37000EFAC91 /* czlog.h */,
+				844FF36C254FB37000EFAC91 /* czlog.cc */,
+				844FF376254FBBE200EFAC91 /* typedefine.h */,
+				AEB22AC925519487006D4827 /* extract_util.h */,
+				AEB22ACA25519487006D4827 /* extract_util.c */,
+				84604EB6255251D90084F1B3 /* mutex.h */,
+				84604EC6255256060084F1B3 /* scopelock.cc */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		8434ABE1254C14CC00957888 /* ZlogDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8434ABE2254C14CC00957888 /* AppDelegate.h */,
+				8434ABE3254C14CC00957888 /* AppDelegate.m */,
+				8434ABE8254C14CC00957888 /* ViewController.h */,
+				8434ABE9254C14CC00957888 /* ViewController.m */,
+				8434ABEB254C14CC00957888 /* Main.storyboard */,
+				8434ABEE254C14CD00957888 /* Assets.xcassets */,
+				8434ABF0254C14CD00957888 /* LaunchScreen.storyboard */,
+				8434ABF3254C14CD00957888 /* Info.plist */,
+				8434ABF4254C14CD00957888 /* main.m */,
+			);
+			path = ZlogDemo;
+			sourceTree = "<group>";
+		};
+		84C7579B2553FD5100D2E90E /* micro-ecc-master */ = {
+			isa = PBXGroup;
+			children = (
+				84C7579C2553FD5100D2E90E /* uECC.h */,
+				84C7579D2553FD5100D2E90E /* asm_avr_mult_square.inc */,
+				84C7579F2553FD5100D2E90E /* uECC_vli.h */,
+				84C757A02553FD5100D2E90E /* curve-specific.inc */,
+				84C757A12553FD5100D2E90E /* types.h */,
+				84C757A22553FD5100D2E90E /* asm_arm.inc */,
+				84C757A32553FD5100D2E90E /* asm_arm_mult_square_umaal.inc */,
+				84C757A42553FD5100D2E90E /* platform-specific.inc */,
+				84C757A52553FD5100D2E90E /* uECC.c */,
+				84C757A62553FD5100D2E90E /* asm_arm_mult_square.inc */,
+				84C757A72553FD5100D2E90E /* asm_avr.inc */,
+			);
+			path = "micro-ecc-master";
+			sourceTree = "<group>";
+		};
+		84DF2187254909A70012A3CB = {
+			isa = PBXGroup;
+			children = (
+				8434AB03254C13B100957888 /* src */,
+				AEB22AD22551969F006D4827 /* apple */,
+				8434ABE1254C14CC00957888 /* ZlogDemo */,
+				84DF2191254909A70012A3CB /* Products */,
+				AEB22ABF254F0CE2006D4827 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84DF2191254909A70012A3CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84DF219C254909D00012A3CB /* libczlog.a */,
+				84DF21B525490AA40012A3CB /* libczlog-macos.a */,
+				8434ABE0254C14CC00957888 /* ZlogDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEB22ABF254F0CE2006D4827 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB22AC3254F0DCE006D4827 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEB22AD22551969F006D4827 /* apple */ = {
+			isa = PBXGroup;
+			children = (
+				AEB22AD42551969F006D4827 /* Zlog.h */,
+				AEB22AD32551969F006D4827 /* Zlog.mm */,
+			);
+			path = apple;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		84DF21B125490AA40012A3CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C757BF2553FD5100D2E90E /* formater.h in Headers */,
+				84C757AC2553FD5100D2E90E /* uECC.h in Headers */,
+				844FF36D254FB37000EFAC91 /* czlog.h in Headers */,
+				84C757AF2553FD5100D2E90E /* uECC_vli.h in Headers */,
+				84C757B22553FD5100D2E90E /* types.h in Headers */,
+				8434AB44254C13B100957888 /* zl_buffer.h in Headers */,
+				8434ABA9254C13B100957888 /* dir_util.h in Headers */,
+				8434AB42254C13B100957888 /* zlutils.h in Headers */,
+				AEB22ABE254EF2FF006D4827 /* android_alarm.h in Headers */,
+				844FF378254FBBE200EFAC91 /* typedefine.h in Headers */,
+				8434ABAB254C13B100957888 /* mmap_util.h in Headers */,
+				8434AB43254C13B100957888 /* ptrbuffer.h in Headers */,
+				84C757C02553FD5100D2E90E /* zl_crypt.h in Headers */,
+				8434AB41254C13B100957888 /* time_util.h in Headers */,
+				AEB22ACB25519487006D4827 /* extract_util.h in Headers */,
+				8434AB92254C13B100957888 /* appender.h in Headers */,
+				8434AB9F254C13B100957888 /* autobuffer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8434ABDF254C14CC00957888 /* ZlogDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8434ABF6254C14CD00957888 /* Build configuration list for PBXNativeTarget "ZlogDemo" */;
+			buildPhases = (
+				8434ABDC254C14CC00957888 /* Sources */,
+				8434ABDD254C14CC00957888 /* Frameworks */,
+				8434ABDE254C14CC00957888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEB22A8B254EEBBE006D4827 /* PBXTargetDependency */,
+			);
+			name = ZlogDemo;
+			productName = ZlogDemo;
+			productReference = 8434ABE0254C14CC00957888 /* ZlogDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84DF219B254909D00012A3CB /* czlog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DF21A2254909D00012A3CB /* Build configuration list for PBXNativeTarget "czlog" */;
+			buildPhases = (
+				84DF2198254909D00012A3CB /* Sources */,
+				84DF2199254909D00012A3CB /* Frameworks */,
+				84DF219A254909D00012A3CB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = czlog;
+			productName = czlog;
+			productReference = 84DF219C254909D00012A3CB /* libczlog.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84DF21B425490AA40012A3CB /* czlog-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DF21B625490AA40012A3CB /* Build configuration list for PBXNativeTarget "czlog-macos" */;
+			buildPhases = (
+				84DF21B125490AA40012A3CB /* Headers */,
+				84DF21B225490AA40012A3CB /* Sources */,
+				84DF21B325490AA40012A3CB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "czlog-macos";
+			productName = "czlog-macos";
+			productReference = 84DF21B525490AA40012A3CB /* libczlog-macos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84DF2188254909A70012A3CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					8434ABDF254C14CC00957888 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					84DF219B254909D00012A3CB = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					84DF21B425490AA40012A3CB = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 84DF218B254909A70012A3CB /* Build configuration list for PBXProject "Zlog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84DF2187254909A70012A3CB;
+			productRefGroup = 84DF2191254909A70012A3CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84DF219B254909D00012A3CB /* czlog */,
+				84DF21B425490AA40012A3CB /* czlog-macos */,
+				8434ABDF254C14CC00957888 /* ZlogDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8434ABDE254C14CC00957888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8434ABF2254C14CD00957888 /* LaunchScreen.storyboard in Resources */,
+				8434ABEF254C14CD00957888 /* Assets.xcassets in Resources */,
+				8434ABED254C14CC00957888 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8434ABDC254C14CC00957888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8434ABEA254C14CC00957888 /* ViewController.m in Sources */,
+				8434ABE4254C14CC00957888 /* AppDelegate.m in Sources */,
+				8434ABF5254C14CD00957888 /* main.m in Sources */,
+				AEB22AD52551969F006D4827 /* Zlog.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DF2198254909D00012A3CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C757B02553FD5100D2E90E /* curve-specific.inc in Sources */,
+				84C757B92553FD5100D2E90E /* uECC.c in Sources */,
+				84C757B72553FD5100D2E90E /* platform-specific.inc in Sources */,
+				8434AB9C254C13B100957888 /* time_util.c in Sources */,
+				84C757BB2553FD5100D2E90E /* asm_arm_mult_square.inc in Sources */,
+				8434AB99254C13B100957888 /* autobuffer.cc in Sources */,
+				84C757B32553FD5100D2E90E /* asm_arm.inc in Sources */,
+				8434AB3E254C13B100957888 /* appender.cc in Sources */,
+				AEB22ACC25519487006D4827 /* extract_util.c in Sources */,
+				8434ABA0254C13B100957888 /* mmap_util.cc in Sources */,
+				84604EB8255251D90084F1B3 /* mutex.h in Sources */,
+				84C757B52553FD5100D2E90E /* asm_arm_mult_square_umaal.inc in Sources */,
+				8434AB93254C13B100957888 /* ptrbuffer.cc in Sources */,
+				844FF36E254FB37000EFAC91 /* czlog.cc in Sources */,
+				8434AB96254C13B100957888 /* dir_util.c in Sources */,
+				84604EC7255256060084F1B3 /* scopelock.cc in Sources */,
+				84C757AA2553FD5100D2E90E /* zl_crypt.cc in Sources */,
+				84C757AD2553FD5100D2E90E /* asm_avr_mult_square.inc in Sources */,
+				84C757BD2553FD5100D2E90E /* asm_avr.inc in Sources */,
+				8434ABA3254C13B100957888 /* zlutils.c in Sources */,
+				8434AB45254C13B100957888 /* zl_buffer.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DF21B225490AA40012A3CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C757B12553FD5100D2E90E /* curve-specific.inc in Sources */,
+				84C757BA2553FD5100D2E90E /* uECC.c in Sources */,
+				84C757B82553FD5100D2E90E /* platform-specific.inc in Sources */,
+				8434AB9D254C13B100957888 /* time_util.c in Sources */,
+				84C757BC2553FD5100D2E90E /* asm_arm_mult_square.inc in Sources */,
+				8434AB9A254C13B100957888 /* autobuffer.cc in Sources */,
+				84C757B42553FD5100D2E90E /* asm_arm.inc in Sources */,
+				8434AB3F254C13B100957888 /* appender.cc in Sources */,
+				AEB22ACD25519487006D4827 /* extract_util.c in Sources */,
+				8434ABA1254C13B100957888 /* mmap_util.cc in Sources */,
+				84604EB9255251D90084F1B3 /* mutex.h in Sources */,
+				84C757B62553FD5100D2E90E /* asm_arm_mult_square_umaal.inc in Sources */,
+				8434AB94254C13B100957888 /* ptrbuffer.cc in Sources */,
+				844FF36F254FB37000EFAC91 /* czlog.cc in Sources */,
+				8434AB97254C13B100957888 /* dir_util.c in Sources */,
+				84604EC8255256060084F1B3 /* scopelock.cc in Sources */,
+				84C757AB2553FD5100D2E90E /* zl_crypt.cc in Sources */,
+				84C757AE2553FD5100D2E90E /* asm_avr_mult_square.inc in Sources */,
+				84C757BE2553FD5100D2E90E /* asm_avr.inc in Sources */,
+				8434ABA4254C13B100957888 /* zlutils.c in Sources */,
+				8434AB46254C13B100957888 /* zl_buffer.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEB22A8B254EEBBE006D4827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DF219B254909D00012A3CB /* czlog */;
+			targetProxy = AEB22A8A254EEBBE006D4827 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8434ABEB254C14CC00957888 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8434ABEC254C14CC00957888 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8434ABF0254C14CD00957888 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8434ABF1254C14CD00957888 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8434ABF7254C14CD00957888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDKADKE54K;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					/czlog/src,
+				);
+				INFOPLIST_FILE = ZlogDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangjie.ZlogDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e";
+			};
+			name = Debug;
+		};
+		8434ABF8254C14CD00957888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDKADKE54K;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					/czlog/src,
+				);
+				INFOPLIST_FILE = ZlogDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangjie.ZlogDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e";
+			};
+			name = Release;
+		};
+		84DF2192254909A70012A3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		84DF2193254909A70012A3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84DF21A3254909D00012A3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDKADKE54K;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DF21A4254909D00012A3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDKADKE54K;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84DF21B725490AA40012A3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDKADKE54K;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		84DF21B825490AA40012A3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XDKADKE54K;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8434ABF6254C14CD00957888 /* Build configuration list for PBXNativeTarget "ZlogDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8434ABF7254C14CD00957888 /* Debug */,
+				8434ABF8254C14CD00957888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DF218B254909A70012A3CB /* Build configuration list for PBXProject "Zlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DF2192254909A70012A3CB /* Debug */,
+				84DF2193254909A70012A3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DF21A2254909D00012A3CB /* Build configuration list for PBXNativeTarget "czlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DF21A3254909D00012A3CB /* Debug */,
+				84DF21A4254909D00012A3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DF21B625490AA40012A3CB /* Build configuration list for PBXNativeTarget "czlog-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DF21B725490AA40012A3CB /* Debug */,
+				84DF21B825490AA40012A3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84DF2188254909A70012A3CB /* Project object */;
+}

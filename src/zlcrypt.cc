@@ -1,11 +1,11 @@
 //
-//  zl_crypt.cc
+//  zlcrypt.cc
 //  zlog
 //
 //  Created by admin on 16/6/14.
 //
 
-#include "zl_crypt.h"
+#include "zlcrypt.h"
 
 #include <errno.h>
 #include <string.h>

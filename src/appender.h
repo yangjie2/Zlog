@@ -10,7 +10,7 @@
 
 
 #include <string>
-#include "zl_buffer.h"
+#include "logbuffer.h"
 #include "mmap_util.h"
 #include "typedefine.h"
 #include "mutex.h"

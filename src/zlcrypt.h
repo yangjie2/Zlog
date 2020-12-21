@@ -1,12 +1,12 @@
 //
-//  zl_crypt.h
+//  zlcrypt.h
 //  zlog
 //
 //  Created by admin on 16/6/14.
 //
 
-#ifndef _ZL_CRYPT_H_
-#define _ZL_CRYPT_H_
+#ifndef _ZLCRYPT_H_
+#define _ZLCRYPT_H_
 
 #include <stdint.h>
 #include <string>

@@ -1,12 +1,12 @@
 //
-//  zl_buffer.h
+//  logbuffe.h
 //  czlog
 //
 //  Created by admin on 2020/10/28.
 //
 
-#ifndef _ZL_BUFFER_H_
-#define _ZL_BUFFER_H_
+#ifndef _LOGBUFFER_H_
+#define _LOGBUFFER_H_
 
 #include <zlib.h>
 #include <string.h>

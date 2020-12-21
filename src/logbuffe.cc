@@ -1,18 +1,18 @@
 //
-//  zl_buffer.c
+//  logbuffe.c
 //  czlog
 //
 //  Created by admin on 2020/10/28.
 //
 
-#include "zl_buffer.h"
+#include "logbuffer.h"
 #include <time.h>
 #include <algorithm>
 #include <sys/time.h>
 #include <string.h>
 #include <errno.h>
 #include <assert.h>
-#include "zl_crypt.h"
+#include "zlcrypt.h"
 
 bool ZLogBuffer::GetPeriodLogs(const char* _log_path, int _begin_hour, int _end_hour, unsigned long& _begin_pos, unsigned long& _end_pos, std::string& _err_msg) {
     return ZLogCrypt::GetPeriodLogs(_log_path, _begin_hour, _end_hour, _begin_pos, _end_pos, _err_msg);

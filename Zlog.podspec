@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'Zlog'
-    s.version          = '1.0.0'
+    s.version          = '1.0.1'
     s.summary          = 'Zlog is a lightweight case logging system based on mobile platform.'
 
     s.homepage         = 'https://github.com/yangjie2/Zlog'

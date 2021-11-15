@@ -18,7 +18,6 @@ bool mmap_file_open(const char * filePath, struct MMAP_file *mmapf) {
         return false;
     }
     unsigned char *p_map = NULL;
-    int size = ZLOG_MMAP_LENGTH;
     int fd = open(filePath, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP); //后两个添加权限
     bool isNeedCheck = false;
     if (fd == -1) {
@@ -32,12 +31,12 @@ bool mmap_file_open(const char * filePath, struct MMAP_file *mmapf) {
         long longBytes = ftell(file);
         if (longBytes < ZLOG_MMAP_LENGTH) {
             fseek(file, 0, SEEK_SET);
-            char zero_data[size];
-            memset(zero_data, 0, size);
+            char zero_data[ZLOG_MMAP_LENGTH];
+            memset(zero_data, 0, ZLOG_MMAP_LENGTH);
             size_t _size = 0;
-            _size = fwrite(zero_data, sizeof(char), size, file);
+            _size = fwrite(zero_data, sizeof(char), ZLOG_MMAP_LENGTH, file);
             fflush(file);
-            if (_size == size) {
+            if (_size == ZLOG_MMAP_LENGTH) {
                zl_printf("copy data to mmap file success\n");
                 isFileOk = true;
                 isNeedCheck = true;
@@ -69,7 +68,7 @@ bool mmap_file_open(const char * filePath, struct MMAP_file *mmapf) {
     }
 
     if (isFileOk) {
-        p_map = (unsigned char *) mmap(0, size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+        p_map = (unsigned char *) mmap(0, ZLOG_MMAP_LENGTH, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
     }
     bool f = false;
     if (p_map != MAP_FAILED && NULL != p_map && isFileOk) {
@@ -89,7 +88,7 @@ bool mmap_file_open(const char * filePath, struct MMAP_file *mmapf) {
     } else { //否则解除内存映射
         f = false;
         if (NULL != p_map) {
-            munmap(p_map, size);
+            munmap(p_map, ZLOG_MMAP_LENGTH);
         }
     }
     return f;

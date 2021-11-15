@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 
-#define ZLOG_MMAP_LENGTH (150*1024) //150k
+#define ZLOG_MMAP_LENGTH (40*4*1024) //160k, 内存分页，每页 4k
 
 struct MMAP_file {
     int file_desc; //file description

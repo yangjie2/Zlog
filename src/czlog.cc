@@ -21,9 +21,9 @@ __inline int __zlog_run_atexit(void (*func)(void)) { return atexit(func);}
 
 
 static Appender *appender = NULL;
-void c_logopen(const char* dir, const char* cache_dir, const char* nameprefix, const char* pub_key) {
+void c_logopen(const char* dir, const char* nameprefix, const char* pub_key) {
     if (NULL == appender) {
-        appender = new Appender(dir, cache_dir, nameprefix, pub_key);
+        appender = new Appender(dir, nameprefix, pub_key);
     }
     appender->open();
     ZLOG_RUN_EXIT(c_logclose);

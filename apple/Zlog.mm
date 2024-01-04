@@ -66,13 +66,14 @@ static NSUInteger ZLOG_PROCESS_ID = (arc4random() % 1000000) + 100000;
 
 - (void)appWillTerminate {
     [Zlog flush];
+    [Zlog close];
 }
 
 
 //MARK: - public
-+ (void)open:(NSString *)dir cachedir:(NSString *)cachedir nameprefix:(NSString *)nameprefix {
++ (void)open:(NSString *)dir nameprefix:(NSString *)nameprefix {
     [Zlog shared];
-    c_logopen(dir.UTF8String, cachedir.UTF8String, nameprefix.UTF8String, "");
+    c_logopen(dir.UTF8String, nameprefix.UTF8String, "");
 }
 
 + (void)setLoglevel:(ZLogLevel)level {

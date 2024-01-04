@@ -10,12 +10,11 @@
 
 #include <stdio.h>
 
-#define ZLOG_MMAP_LENGTH (40*4*1024) //160k, 内存分页，每页 4k
+#define ZLOG_MMAP_LENGTH (8*16*1024) //128KB **iOS/安卓系统中，内存页大小通常是4KB，这里的大小应该是 4KB 的整数倍**
 
 struct MMAP_file {
-    int file_desc; //file description
-    void * mmap_ptr;
-    size_t len;
+    void *mmap_ptr; //内存映射后返回的指针
+    size_t len; //映射的文件大小
 };
 
 /**

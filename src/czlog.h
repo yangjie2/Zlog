@@ -10,7 +10,7 @@
 
 #include "typedefine.h"
     
-void c_logopen(const char* dir, const char* cache_dir, const char* nameprefix, const char* pub_key);
+void c_logopen(const char* dir, const char* nameprefix, const char* pub_key);
     
 void c_setloglevel(ZlogLevel level);
 

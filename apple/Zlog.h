@@ -26,13 +26,15 @@ typedef enum {
 #define LOG_DEBUG(module, format, ...) LogInternal(kDebug, module, __FILENAME__, __LINE__, __FUNCTION__, @"Debug: ", format, ##__VA_ARGS__)
 
 @interface Zlog : NSObject
-
-+ (void)open:(NSString *)dir cachedir:(NSString *)cachedir nameprefix:(NSString *)nameprefix;
+//初始化打开文件
++ (void)open:(NSString *)dir nameprefix:(NSString *)nameprefix;
 
 + (void)setLoglevel:(ZLogLevel)level;
 
+///是否允许控制台打印
 + (void)enableConsole:(BOOL)isenable;
 
+//写入
 + (void)flush;
 
 + (void)close;

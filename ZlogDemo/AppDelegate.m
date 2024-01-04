@@ -8,6 +8,8 @@
 #import "AppDelegate.h"
 #import <Foundation/Foundation.h>
 #import "Zlog.h"
+#include <sys/xattr.h>
+#import "PWLogFileUtil.h"
 
 @interface AppDelegate ()
 
@@ -25,10 +27,13 @@
     u_int8_t attrValue = 1;
     setxattr([logPath UTF8String], attrName, &attrValue, sizeof(attrValue), 0, 0);
 
-    [Zlog open:logPath cachedir:logPath nameprefix:@"1234"];
+    [Zlog open:logPath nameprefix:@"1234"];
     [Zlog setLoglevel:kDebug];
     return YES;
 }
 
+- (void)applicationWillTerminate:(UIApplication *)application {
+    [Zlog close];
+}
 
 @end

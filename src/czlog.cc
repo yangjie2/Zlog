@@ -42,7 +42,6 @@ void c_logflush() {
 }
 
 void c_logclose() {
-    printf("======= 关闭.");
     appender->close();
 }
 

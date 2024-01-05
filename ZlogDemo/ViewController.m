@@ -37,8 +37,8 @@
     mach_timebase_info(&info);
     uint64_t start = mach_absolute_time();
     for (int i=0; i<1; i++) {
-        LOG_INFO("Login", @"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
-        LOG_ERROR("Login", @"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
+        LOG_INFO(@"ZlogDemo", @"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
+        LOG_ERROR(@"Login", @"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
 //        NSLog(@"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
 //        NSLog(@"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
     }

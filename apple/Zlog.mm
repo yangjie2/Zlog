@@ -7,6 +7,7 @@
 
 #import "Zlog.h"
 #include "czlog.h"
+#include "zlutils.h"
 
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
@@ -80,8 +81,8 @@ static NSUInteger ZLOG_PROCESS_ID = (arc4random() % 1000000) + 100000;
     c_setloglevel((ZlogLevel)level);
 }
 
-+ (void)enableConsole:(BOOL)isenable {
-    
++ (void)setDebugEnv:(int)debug {
+    zl_set_debug(debug);
 }
 
 + (void)flush {
@@ -96,7 +97,7 @@ static NSUInteger ZLOG_PROCESS_ID = (arc4random() % 1000000) + 100000;
     if (level < (ZLogLevel)c_loglevel()) {
         return;
     }
-    if (!msg || msg.length == 0 ) {
+    if (!msg) {
         return;
     }
     ZLogBasicInfo info;

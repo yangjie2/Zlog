@@ -31,8 +31,9 @@ typedef enum {
 
 + (void)setLoglevel:(ZLogLevel)level;
 
-///是否允许控制台打印
-+ (void)enableConsole:(BOOL)isenable;
+///设置是否是DEBUG模式  1:DEBUG  0:RELEASE
+///DEBUG 模式下，会在控制台打印日志
++ (void)setDebugEnv:(int)debug;
 
 //写入
 + (void)flush;

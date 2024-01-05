@@ -198,7 +198,7 @@ void Appender::writelog(const ZLogBasicInfo* info, const char* log) {
     //format 转化为需要的格式
     std::string format = log_formater(info, log);
     const char *logdata = format.c_str(); size_t len = format.length();
-    
+    zl_printf("%s", logdata);
     if (!_log_buffer->Write(logdata, len)) {
         return;
     }

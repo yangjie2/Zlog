@@ -31,7 +31,7 @@
 
 
 - (IBAction)makeCrash:(id)sender {
-//    exit(0);
+    [self performSelector:@selector(kkk)];
 }
 
 - (IBAction)writeLog:(id)sender {
@@ -39,11 +39,11 @@
     mach_timebase_info_data_t info;
     mach_timebase_info(&info);
     uint64_t start = mach_absolute_time();
-    for (int i=0; i<100000; i++) {
-        @autoreleasepool {
-            NSString *log = [NSString stringWithFormat:@"%@ %@",@(i), text];
-            LOG_INFO("=== 当前文件夹不存在：/var/mobile/Containers/Data/Application/EB8F6491-A3AA-4B6A-8E40-35032C5D4742/Documents/log 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康复苏打粉离开家啊圣诞快乐分安德森饭撒地方 看了放声大哭福师大；克己复礼看啊时代峰峻卡上的纠纷。", log);
-        }
+    for (int i=0; i<1; i++) {
+        LOG_INFO("Login", @"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
+        LOG_ERROR("Login", @"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
+//        NSLog(@"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
+//        NSLog(@"=== 放假了睡觉啊风景Klas机路附近的萨减肥啊时间来康。");
     }
     self.textView.text = @"";
     uint64_t end = mach_absolute_time();

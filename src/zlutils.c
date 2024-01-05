@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-static int zlog_is_debug = 1;
+static int zlog_is_debug = 0;
 
 int zl_printf(const char *fmt, ...) {
     int cnt = 0;

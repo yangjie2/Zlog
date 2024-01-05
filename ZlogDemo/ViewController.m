@@ -8,7 +8,6 @@
 #import "ViewController.h"
 #import "Zlog.h"
 #import <mach/mach_time.h>
-#import "FLEXManager.h"
 
 @interface ViewController ()
 - (IBAction)writeLog:(id)sender;
@@ -21,12 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[FLEXManager sharedManager] showExplorer];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[FLEXManager sharedManager] showExplorer];
 }
 
 

@@ -11,6 +11,7 @@
 #import "Zlog.h"
 #include <sys/xattr.h>
 #import "PWLogFileUtil.h"
+#import "FLEXManager.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[FLEXManager sharedManager] showExplorer];
+    
     // Override point for customization after application launch.
     NSString* logPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/log"];
 //    // set do not backup for logpath

@@ -44,10 +44,9 @@ static const uint64_t ZLOG_MAX_ONE_LOGFILE_SIZE = 0; // 0, will not split log fi
 
 #define ZLOG_EXT "zlog" //扩展名
 
-Appender::Appender(const char* dir, const char* cache_dir, const char* nameprefix, const char* pub_key) {
+Appender::Appender(const char* dir, const char* nameprefix, const char* pub_key) {
     _level = kLevelInfo;
     _log_dir = dir;
-    _cache_dir = cache_dir;
     _nameprefix = nameprefix;
     _is_appender_close = true;
     _log_buffer = NULL;
@@ -64,7 +63,6 @@ void Appender::reset() {
     closelogbuffer();
     _level = kLevelNone;
     _log_dir = "";
-    _cache_dir = "";
     _pub_key = "";
     _is_appender_close = true;
     _logfile = NULL;
@@ -90,18 +88,13 @@ ZlogLevel Appender::loglevel() {
 void Appender::open() {
     assert(!_log_dir.empty());
     assert(!_nameprefix.empty());
-        
+    
     if (_is_appender_close == false) {
         zl_printf("appender has already been opened. _log_dir:%s _nameprefix:%s", _log_dir.c_str(), _nameprefix.c_str());
         return;
     }
-    
     //create dir
     zl_makedir(_log_dir.c_str());
-    if (!_cache_dir.empty() && _log_dir != _cache_dir) {
-        zl_makedir(_cache_dir.c_str());
-    }
-        
     //mmap
     if (!make_logbuffer()) {
         return;
@@ -179,38 +172,41 @@ void Appender::close() {
 void Appender::writelog(const ZLogBasicInfo* info, const char* log) {
     assert(NULL != info);
     assert(NULL != log);
+    if (log == NULL) {
+        return;
+    }
     ScopedLock lock(_logbuffer_mutex);
     
     if (_is_appender_close || NULL == _log_buffer) {
         return;
     }
     
-    //TODO: ============ 最耗时操作：access() 函数
+    //============ 最耗时操作：access() 函数
     //再次检查日志文件目录是否存在
-    if (zl_file_exist(_log_dir.c_str()) == 0) {
-        zl_makedir(_log_dir.c_str());
-    }
-    //再次检查mmap文件是否存在
-    if (_use_mmap && zl_file_exist(_mmap_filepath.c_str()) == 0) {
-        //先关闭
-        closemmapfile();
-        //重新打开
-        if (!make_logbuffer()) {
-            return;
-        }
-    }
+//    if (zl_file_exist(_log_dir.c_str()) == 0) {
+//        zl_makedir(_log_dir.c_str());
+//    }
+//    //再次检查mmap文件是否存在
+//    if (_use_mmap && zl_file_exist(_mmap_filepath.c_str()) == 0) {
+//        //先关闭
+//        closemmapfile();
+//        //重新打开
+//        if (!make_logbuffer()) {
+//            return;
+//        }
+//    }
     // ============ 最耗时部分
     
     
     //format 转化为需要的格式
     std::string format = log_formater(info, log);
     const char *logdata = format.c_str(); size_t len = format.length();
-    
+    zl_printf("%s", logdata);
     if (!_log_buffer->Write(logdata, len)) {
         return;
     }
     //判断buffer 数据长度，大于阈值马上写入文件
-    if (_log_buffer->GetData().Length() >= ZLOG_MMAP_LENGTH*0.35 || (NULL != log && info->level == kLevelFatal)) {
+    if ((_log_buffer->GetData().Length() >= ZLOG_MMAP_LENGTH*0.6) || (info->level == kLevelFatal)) {
         flush();
     }
 }
@@ -222,7 +218,7 @@ void Appender::writelog(const ZLogBasicInfo* info, const char* log) {
 //MARK: - private
 bool Appender::make_logbuffer() {
     char mmap_file_path[512] = {0};
-    snprintf(mmap_file_path, sizeof(mmap_file_path), "%s/%s.mmap3", _cache_dir.empty()?_log_dir.c_str():_cache_dir.c_str(), _nameprefix.c_str());
+    snprintf(mmap_file_path, sizeof(mmap_file_path), "%s/%s.mmap3", _log_dir.c_str(), _nameprefix.c_str());
     //开启mmap
     if (mmap_file_open(mmap_file_path, &_mmap_f)) {
         _use_mmap = true;
@@ -255,9 +251,10 @@ bool Appender::open_logfile() {
         tm tcur = *localtime((const time_t*)&sec);
         tm filetm = *localtime(&_open_filetime);
         bool istoday = filetm.tm_year == tcur.tm_year && filetm.tm_mon == tcur.tm_mon && filetm.tm_mday == tcur.tm_mday;
-        if (istoday && ZLOG_MAX_ONE_LOGFILE_SIZE == 0) {
+        if (istoday && ZLOG_MAX_ONE_LOGFILE_SIZE == 0) { //是今天，并且文件打开了，直接返回
             return true;
         }
+        //打开的不是今天的日志文件，则关闭该文件
         closelogfile();
     }
     //顺序 2
@@ -394,7 +391,7 @@ void Appender::writefile_fragment(void* data, size_t len) {
     }
 }
 
-//写入数据到文件，不会将数据压缩加密
+//写入数据到文件，不压缩加密
 bool Appender::writefile(const void* data, size_t len) {
     if (NULL ==data || 0 == len) {
         return false;

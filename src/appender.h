@@ -22,9 +22,8 @@ class Appender {
 
 public:
     //所有目录都指的是绝对路径
-    //cache_dir: mmap 缓存目录
     //dir: 日志文件目录
-    Appender(const char* dir, const char* cache_dir, const char* nameprefix, const char* pub_key);
+    Appender(const char* dir, const char* nameprefix, const char* pub_key);
     ~Appender();
     
 public:
@@ -56,15 +55,14 @@ private:
 private:
     ZlogLevel _level;
     std::string _log_dir;
-    std::string _cache_dir;
     std::string _nameprefix;
     std::string _pub_key;
     
 private:
     bool _is_appender_close;
     ZLogBuffer *_log_buffer;
-    FILE* _logfile = NULL;
-    std::string _mmap_filepath; //mmap文件
+    FILE* _logfile = NULL; //保存日志的文件
+    std::string _mmap_filepath; //mmap文件 xxx.mmap
     time_t _open_filetime = 0;
     bool _use_mmap = false; //正在使用mmap缓存
     MMAP_file _mmap_f;

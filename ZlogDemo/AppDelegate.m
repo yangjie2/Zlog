@@ -8,6 +8,9 @@
 #import "AppDelegate.h"
 #import <Foundation/Foundation.h>
 #import "Zlog.h"
+#include <sys/xattr.h>
+#import "PWLogFileUtil.h"
+#import "FLEXManager.h"
 
 @interface AppDelegate ()
 
@@ -17,18 +20,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[FLEXManager sharedManager] showExplorer];
+    
     // Override point for customization after application launch.
     NSString* logPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/log"];
-
 //    // set do not backup for logpath
     const char* attrName = "com.apple.MobileBackup";
     u_int8_t attrValue = 1;
     setxattr([logPath UTF8String], attrName, &attrValue, sizeof(attrValue), 0, 0);
 
-    [Zlog open:logPath cachedir:logPath nameprefix:@"1234"];
+    [Zlog open:logPath nameprefix:@"1234"];
     [Zlog setLoglevel:kDebug];
+    [Zlog setDebugEnv:0];
+    
     return YES;
 }
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    [Zlog close];
+}
+
 
 
 @end

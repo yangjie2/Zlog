@@ -7,6 +7,7 @@
 
 #import "Zlog.h"
 #include "czlog.h"
+#include "zlutils.h"
 
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
@@ -66,21 +67,22 @@ static NSUInteger ZLOG_PROCESS_ID = (arc4random() % 1000000) + 100000;
 
 - (void)appWillTerminate {
     [Zlog flush];
+    [Zlog close];
 }
 
 
 //MARK: - public
-+ (void)open:(NSString *)dir cachedir:(NSString *)cachedir nameprefix:(NSString *)nameprefix {
++ (void)open:(NSString *)dir nameprefix:(NSString *)nameprefix {
     [Zlog shared];
-    c_logopen(dir.UTF8String, cachedir.UTF8String, nameprefix.UTF8String, "");
+    c_logopen(dir.UTF8String, nameprefix.UTF8String, "");
 }
 
 + (void)setLoglevel:(ZLogLevel)level {
     c_setloglevel((ZlogLevel)level);
 }
 
-+ (void)enableConsole:(BOOL)isenable {
-    
++ (void)setDebugEnv:(int)debug {
+    zl_set_debug(debug);
 }
 
 + (void)flush {
@@ -95,7 +97,7 @@ static NSUInteger ZLOG_PROCESS_ID = (arc4random() % 1000000) + 100000;
     if (level < (ZLogLevel)c_loglevel()) {
         return;
     }
-    if (!msg || msg.length == 0 ) {
+    if (!msg) {
         return;
     }
     ZLogBasicInfo info;

@@ -32,8 +32,7 @@
 
     [Zlog open:logPath nameprefix:@"1234"];
     [Zlog setLoglevel:kDebug];
-    [Zlog setDebugEnv:1];
-    
+    [Zlog setDebugEnv:1];    
     return YES;
 }
 

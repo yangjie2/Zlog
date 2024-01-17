@@ -172,6 +172,9 @@ void Appender::close() {
 void Appender::writelog(const ZLogBasicInfo* info, const char* log) {
     assert(NULL != info);
     assert(NULL != log);
+    if (log == NULL) {
+        return;
+    }
     ScopedLock lock(_logbuffer_mutex);
     
     if (_is_appender_close || NULL == _log_buffer) {
@@ -203,7 +206,7 @@ void Appender::writelog(const ZLogBasicInfo* info, const char* log) {
         return;
     }
     //判断buffer 数据长度，大于阈值马上写入文件
-    if (_log_buffer->GetData().Length() >= ZLOG_MMAP_LENGTH*0.6 || (NULL != log && info->level == kLevelFatal)) {
+    if ((_log_buffer->GetData().Length() >= ZLOG_MMAP_LENGTH*0.6) || (info->level == kLevelFatal)) {
         flush();
     }
 }

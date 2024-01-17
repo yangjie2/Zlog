@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import <Foundation/Foundation.h>
+#import <CrashReporter/CrashReporter.h>
 #import "Zlog.h"
 #include <sys/xattr.h>
 #import "PWLogFileUtil.h"
@@ -31,8 +32,7 @@
 
     [Zlog open:logPath nameprefix:@"1234"];
     [Zlog setLoglevel:kDebug];
-    [Zlog setDebugEnv:0];
-    
+    [Zlog setDebugEnv:1];    
     return YES;
 }
 
